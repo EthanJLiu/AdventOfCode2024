@@ -1,7 +1,7 @@
-import math
+
 
 def p1():
-    with open("Day1_Input.txt") as f:
+    with open("Day1/Day1_Input.txt") as f:
         left = []
         right = []
 
@@ -21,7 +21,7 @@ def p1():
 p1()
 
 def p2():
-    with open("Day1_Input.txt") as f:
+    with open("Day1/Day1_Input.txt") as f:
         left = []
         right = []
 
@@ -44,7 +44,7 @@ def p2():
                 if right_location == left_location:
                     num_repeated +=1
                     similarity_score += int(left_location * num_repeated)
-                    seen_locations[left_location] = num_repeated
+                    seen_locations[left_location] = num_repeated #prevent recounting of similarity score already counted
                     
     print (similarity_score)
 
